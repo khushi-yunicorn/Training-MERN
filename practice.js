@@ -201,7 +201,6 @@ myPromise
 async function greet() {
   return "Hello!";
 }
-
 greet().then(console.log); // Always return a promise
 
 
@@ -216,5 +215,15 @@ async function showData() {
   const result = await getData(); 
   console.log(result);
 }
-
 showData();
+
+
+// Iterators
+
+const arr = [10, 20, 30];
+const iterator = arr[Symbol.iterator]();
+
+console.log(iterator.next()); // { value: 10, done: false }
+console.log(iterator.next()); // { value: 20, done: false }
+console.log(iterator.next()); // { value: 30, done: false }
+console.log(iterator.next()); // { value: undefined, done: true }

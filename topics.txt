@@ -23,3 +23,5 @@
     * Private
 
 6. Promises & Async/Await
+
+7. Iterators
