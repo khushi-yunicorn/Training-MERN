@@ -21,3 +21,16 @@ console.log(text.trim());
 console.log(text.replace("ABC", "XYZ"));
 
 console.log(text.split(""));
+
+
+// FUNCTIONS PARAMETERS
+function myFunction(x, y = 10) {
+  return x + y;
+}
+myFunction(5);
+
+// Function Expression
+const x = function (a, b) {return a * b};
+
+//Function Arrows
+let myFunction = (a, b) => a * b;
