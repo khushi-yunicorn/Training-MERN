@@ -40,3 +40,12 @@ function afterGreeting() {
 
 greet("Alice", afterGreeting);
 
+// EVENT LOOP
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout");
+}, 0);
+
+console.log("End");  // Start End Timeout
+
