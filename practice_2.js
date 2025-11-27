@@ -49,3 +49,107 @@ setTimeout(() => {
 
 console.log("End");  // Start End Timeout
 
+//  DOM manipulation
+
+// Select by ID
+document.getElementById("title");
+
+// Select by ClassName
+document.getElementsByClassName("item");
+
+// Select by tag
+document.getElementsByTagName("div");
+
+// Select Multiple
+document.querySelectorAll("li");
+
+// CHANGING CONTENT
+
+// Change text
+document.querySelector("#title").textContent = "Hello World";
+
+// Change HTML
+document.querySelector("#box").innerHTML = "<p>New Content</p>";
+
+// Changing Styles
+document.querySelector(".box").style.backgroundColor = "blue";
+document.querySelector(".box").style.fontSize = "20px";
+
+// Changing Attributes
+document.querySelector("img").src = "image.jpg";
+document.querySelector("a").href = "https://google.com";
+
+// Adding & Removing Classes
+const box = document.querySelector(".box");
+
+box.classList.add("active");
+box.classList.remove("hidden");
+box.classList.toggle("highlight"); // adds/removes
+
+// Browser API
+
+// Local Storage
+localStorage.setItem("name", "John");
+localStorage.getItem("name"); // "John"
+localStorage.removeItem("name");
+
+// Fetch API request
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+
+// Scopes
+
+// Global Scope
+let x = 10; // global
+
+function show() {
+  console.log(x); // 10
+}
+show();
+
+// Funtion scope
+function test() {
+  let a = 20; // function scoped
+  console.log(a);
+}
+
+test();
+console.log(a); // ❌ Error: a is not defined
+
+// Block Scope
+{
+  let b = 30;
+}
+console.log(b); // ❌ Error
+
+// Lexical Scope
+function outer() {
+  let x = 10;
+
+  function inner() {
+    console.log(x); // can access x because inner is inside outer
+  }
+
+  inner();
+}
+outer();
+
+// Closures
+function outer() {
+  let count = 0;
+
+  function inner() {
+    count++;
+    console.log(count);
+  }
+
+  return inner;
+}
+
+const counter = outer();
+
+counter(); // 1
+counter(); // 2
+counter(); // 3

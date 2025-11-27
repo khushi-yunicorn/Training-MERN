@@ -6,3 +6,9 @@
 2. Callbacks
 
 3. Event Loop
+
+4. DOM manipulation
+
+5. Browser API
+
+6. Scopes (Global scope, function scope, block scope), Lexical Scope, Closures
