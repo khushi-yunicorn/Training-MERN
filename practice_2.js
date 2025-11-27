@@ -153,3 +153,43 @@ const counter = outer();
 counter(); // 1
 counter(); // 2
 counter(); // 3
+
+// Hoisting
+console.log(a); 
+var a = 10; //undefined
+
+console.log(b);
+let b = 20; // Reference Error
+
+console.log(c);
+const c = 30; // Reference error
+
+// CALL
+function greet(msg) {
+  console.log(msg, this.name);
+}
+
+greet.call({name: "Alice"}, "Hello");
+// Hello Alice
+
+// Apply
+greet.apply({name: "Bob"}, ["Hi"]);
+
+// Bind
+const greetBob = greet.bind({name: "Bob"}, "Hello");
+greetBob();
+// Hello Bob
+
+// Array Destructor
+const arr = [10, 20, 30];
+const [a, , c] = arr;
+
+console.log(a, c); // 10 30
+
+// Rest Operator
+const [first, ...rest] = [1, 2, 3, 4];
+console.log(rest); // [2, 3, 4]
+
+// Spread Operator
+const arr1 = [1, 2];
+const arr2 = [...arr1];

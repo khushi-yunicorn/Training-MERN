@@ -12,3 +12,12 @@
 5. Browser API
 
 6. Scopes (Global scope, function scope, block scope), Lexical Scope, Closures
+
+7. Hoisting (var, let, const differences)
+
+8. Event Loop, Task Queue, Microtasks vs Macrotasks
+
+9. this keyword & Binding (call, apply, bind)
+
+10. Destructuring & Rest/Spread Operator (advanced use cases)
+
