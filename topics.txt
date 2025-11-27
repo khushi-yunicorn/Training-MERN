@@ -16,3 +16,9 @@
     * Objects (Create, Add, Update, Delete, Nested Object)
     * Arrays, Arrays method, Looping through arrays, Array Transformations 
 
+5. Classes
+    * Creation of Class
+    * Class Inheritance
+    * Getter and Setter
+    * Private
+

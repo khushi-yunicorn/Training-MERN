@@ -102,3 +102,81 @@ let evens = [1, 2, 3, 4].filter(n => n % 2 === 0);
 // Reduce
 let sum = [1, 2, 3].reduce((total, n) => total + n, 0);
 // 6
+
+// CLASS
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+}
+
+const p1 = new Person("Alice", 25);
+p1.greet();
+
+// Class Inheritance
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} makes a sound`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // call parent constructor
+    this.breed = breed;
+  }
+
+  speak() {
+    console.log(`${this.name} barks`);
+  }
+}
+
+const d = new Dog("Max", "Labrador");
+d.speak();
+
+// Getter and Setter
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  get area() {
+    return this.width * this.height;
+  }
+
+  set widthValue(value) {
+    this.width = value;
+  }
+}
+
+const r = new Rectangle(5, 10);
+console.log(r.area); // 50
+
+// Private
+class Bank {
+  #balance = 0;
+
+  deposit(amount) {
+    this.#balance += amount;
+  }
+
+  getBalance() {
+    return this.#balance;
+  }
+}
+
+const b = new Bank();
+b.deposit(100);
+console.log(b.getBalance()); // 100
+
+// 
