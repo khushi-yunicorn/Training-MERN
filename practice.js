@@ -179,4 +179,42 @@ const b = new Bank();
 b.deposit(100);
 console.log(b.getBalance()); // 100
 
-// 
+// Promises & Async/Await
+
+// Create Promise
+let myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Success!");
+    // reject("Error!");
+  }, 1000);
+});
+
+myPromise
+  .then(result => {
+    console.log(result); // "Success!"
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
+// Async and Await
+async function greet() {
+  return "Hello!";
+}
+
+greet().then(console.log); // Always return a promise
+
+
+// Await
+function getData() {
+  return new Promise(resolve => {
+    setTimeout(() => resolve("Data loaded"), 1000);
+  });
+}
+
+async function showData() {
+  const result = await getData(); 
+  console.log(result);
+}
+
+showData();

@@ -22,3 +22,4 @@
     * Getter and Setter
     * Private
 
+6. Promises & Async/Await
