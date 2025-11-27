@@ -1,0 +1,8 @@
+1. Variable & Data Types & Scoping
+    * var, let and const
+    * Primitive (String, Number, Boolean, Undefined, Null, BigInt, Symbol) and Non Primitive (Object, Array, Function)
+    * Scoping (Global Scope, Function Scope, Block Scope, Lexical Scope)
+
+2. Strings  
+    * Description (Single quote, Double quote, Backslash)
+    * Methods (length(), charAt(), concat(), at(), slice(), substring(), toUppercase(), toLowercase(), trim(), replace(), split())
