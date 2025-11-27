@@ -227,3 +227,15 @@ console.log(iterator.next()); // { value: 10, done: false }
 console.log(iterator.next()); // { value: 20, done: false }
 console.log(iterator.next()); // { value: 30, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
+
+// Generators
+function* counter() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const it = counter();
+
+console.log(it.next()); // { value: 1, done: false }
+console.log(it.next()); // { value: 2, done: false }

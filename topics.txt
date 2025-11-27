@@ -25,3 +25,5 @@
 6. Promises & Async/Await
 
 7. Iterators
+
+8. Generators
