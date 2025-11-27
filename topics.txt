@@ -6,3 +6,9 @@
 2. Strings  
     * Description (Single quote, Double quote, Backslash)
     * Methods (length(), charAt(), concat(), at(), slice(), substring(), toUppercase(), toLowercase(), trim(), replace(), split())
+
+3. Functions
+    * Function Parameters
+    * Function Expression
+    * Function Arrows
+
