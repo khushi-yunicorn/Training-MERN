@@ -98,3 +98,12 @@ button{
 .side-button:hover{
     background-color: #333333a8;
 }
+
+.btn-sm{
+    font-size: 10px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 2px;
+}
