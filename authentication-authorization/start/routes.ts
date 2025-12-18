@@ -25,3 +25,8 @@ router.post('/register', [AuthController, 'register'])
 
 // Protected route
 router.get('/profile', [AuthController, 'profile']).use([middleware.auth()])
+
+// Logout
+router
+  .post('/logout', [AuthController, 'logout'])
+  .use(middleware.auth())

@@ -20,7 +20,7 @@ export default class AuthController {
             return response.unauthorized({message: 'EMAIL credentials'})
         }
 
-        console.log(password);
+        // console.log(password);
         // Compare password
         const isValid = await hash.verify(user.password, password)
 
@@ -33,6 +33,12 @@ export default class AuthController {
                                env.get('JWT_SECRET'),
                                {expiresIn: '1h'}
                     )
+
+        response.cookie('token', token, {
+            httpOnly: true,
+            secure: false,
+            sameSite: 'lax'
+        })
 
         return{
             message: 'Login successful',
@@ -64,6 +70,14 @@ export default class AuthController {
             message: 'Protected profile',
             user
         }
+    }
+
+    // Logout
+    async logout({response}: HttpContext){
+        response.clearCookie('token')
+        return response.ok({
+            message:'Logged out successfully.'
+        })
     }
 
 }

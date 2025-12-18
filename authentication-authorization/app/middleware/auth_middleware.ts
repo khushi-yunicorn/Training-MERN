@@ -4,7 +4,7 @@ import env from '#start/env'
 
 export default class AuthMiddleware {
   async handle( {request, response}: HttpContext, next: ()=>Promise<void>) {
-    const authHeader = request.header('authorization')
+    const authHeader = request.header('authorization') || request.cookie('token')
     if (!authHeader){
       return response.unauthorized({
         message: 'Token missing',
